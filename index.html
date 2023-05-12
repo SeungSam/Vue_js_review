@@ -1,0 +1,39 @@
+#04 이벤트 (Events)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>뷰 기초 익히기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form v-on:submit.prevent="submit">
+            <input type="text"><br>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                year: 2018
+            },
+            methods: {
+                plus() {
+                    this.year++;
+                },
+                minus() {
+                    this.year--;
+                },
+                submit() {
+                    alert('submitted')
+                    console.log('hello')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
